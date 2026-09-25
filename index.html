@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinSight - The Smart Wealth Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="logo.svg" alt="FinSight logo" class="logo-img">
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item active">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Top Header Bar with Prominent Action Controls -->
+      <header class="top-bar">
+        <div>
+          <h1>Good evening, Nikhil</h1>
+          <p class="subtitle">Here's where things stand today</p>
+        </div>
+        <div class="top-actions">
+          <a class="btn btn-secondary" href="#goalModal" title="Define a new savings or investment goal">
+            <span class="btn-icon">🎯</span>
+            <span>Set Goal</span>
+          </a>
+          <a class="btn btn-primary" href="#txModal" title="Log an expense or income entry">
+            <span class="btn-icon">+</span>
+            <span>Add Transaction</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Compact Horizontally-Aligned Metric Cards -->
+      <section class="cards-grid" aria-label="Key Financial Metrics">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Net Worth</span>
+            <span class="card-icon-pill">💼</span>
+          </div>
+          <p class="card-value">₹8,42,300</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">▲ +₹26,100 (3.2%)</span>
+          </div>
+          <span class="card-subtext">Liquid: ₹3.2L • Invested: ₹5.2L</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Monthly Spend</span>
+            <span class="card-icon-pill">💳</span>
+          </div>
+          <p class="card-value" id="monthlySpendVal">₹28,410</p>
+          <div class="card-footer-row">
+            <span class="card-change negative">▲ 8% vs last month</span>
+          </div>
+          <span class="card-subtext">Cap: ₹35,000 (81.2% utilized)</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Savings Rate</span>
+            <span class="card-icon-pill">🎯</span>
+          </div>
+          <p class="card-value">34.8%</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral">Goal: 40% target</span>
+          </div>
+          <span class="card-subtext">₹36,590 saved this cycle</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Budgets on Track</span>
+            <span class="card-icon-pill">📊</span>
+          </div>
+          <p class="card-value">5 / 7 Active</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral">2 categories over</span>
+          </div>
+          <span class="card-subtext">Food & Shopping need attention</span>
+        </div>
+      </section>
+
+      <!-- Monthly Spending vs. Income Trend Graph Section -->
+      <section class="chart-card" aria-label="Monthly Spending vs. Income Trend">
+        <div class="chart-header">
+          <div class="chart-title-block">
+            <div class="chart-title-inline">
+              <h2>Monthly Spending vs. Income Trend</h2>
+              <span class="chart-tag">Cashflow Overview</span>
+            </div>
+            <p class="chart-subtitle">Real-time comparison of inflows and outbound expenditures</p>
+          </div>
+
+          <div class="chart-controls">
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-dot income-dot"></span> Income</span>
+              <span class="legend-item"><span class="legend-dot spend-dot"></span> Spending</span>
+            </div>
+            <div class="timeframe-selector" role="group" aria-label="Chart Timeframe">
+              <button class="tf-btn active" data-timeframe="6M">6M</button>
+              <button class="tf-btn" data-timeframe="YTD">YTD</button>
+              <button class="tf-btn" data-timeframe="1Y">1Y</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Snapshot Bar -->
+        <div class="chart-summary-bar">
+          <div class="summary-pill">
+            <span class="summary-label">Total Inflow</span>
+            <span class="summary-value positive-text" id="summaryIncome">₹4,02,000</span>
+          </div>
+          <div class="summary-pill">
+            <span class="summary-label">Total Outflow</span>
+            <span class="summary-value negative-text" id="summarySpend">₹1,77,810</span>
+          </div>
+          <div class="summary-pill">
+            <span class="summary-label">Net Capital Saved</span>
+            <span class="summary-value highlight-text" id="summaryNet">+₹2,24,190 (56%)</span>
+          </div>
+          <div class="summary-pill">
+            <span class="summary-label">Daily Avg Burn</span>
+            <span class="summary-value muted-text">₹947/day</span>
+          </div>
+        </div>
+
+        <!-- Interactive SVG Chart Area -->
+        <div class="chart-canvas-wrapper" id="chartContainer">
+          <svg viewBox="0 0 760 220" class="chart-svg" preserveAspectRatio="none" aria-label="Six month income and spending chart" role="img">
+            <defs>
+              <linearGradient id="incomeGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+              <linearGradient id="spendGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#e11d48"/></linearGradient>
+            </defs>
+            <g fill="none" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="3 3"><path d="M55 25H740M55 65H740M55 105H740M55 145H740M55 185H740"/></g>
+            <g fill="#94a3b8" font-size="11" text-anchor="end" font-weight="500"><text x="45" y="189">₹0</text><text x="45" y="149">₹20k</text><text x="45" y="109">₹40k</text><text x="45" y="69">₹60k</text><text x="45" y="29">₹80k</text></g>
+            <path d="M111 128 L221 121 L331 132 L441 116 L551 125 L661 128" fill="none" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4 4" opacity=".6"/>
+            <g class="chart-month-group"><rect class="bar-income" x="91" y="80" width="18" height="105" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="115" y="130" width="18" height="55" rx="4" fill="url(#spendGradient)"/><text x="111" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">Apr</text></g>
+            <g class="chart-month-group"><rect class="bar-income" x="201" y="72" width="18" height="113" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="225" y="126" width="18" height="59" rx="4" fill="url(#spendGradient)"/><text x="221" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">May</text></g>
+            <g class="chart-month-group"><rect class="bar-income" x="311" y="72" width="18" height="113" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="335" y="132" width="18" height="53" rx="4" fill="url(#spendGradient)"/><text x="331" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">Jun</text></g>
+            <g class="chart-month-group"><rect class="bar-income" x="421" y="65" width="18" height="120" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="445" y="117" width="18" height="68" rx="4" fill="url(#spendGradient)"/><text x="441" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">Jul</text></g>
+            <g class="chart-month-group"><rect class="bar-income" x="531" y="65" width="18" height="120" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="555" y="125" width="18" height="60" rx="4" fill="url(#spendGradient)"/><text x="551" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">Aug</text></g>
+            <g class="chart-month-group"><rect class="bar-income" x="641" y="57" width="18" height="128" rx="4" fill="url(#incomeGradient)"/><rect class="bar-spend" x="665" y="128" width="18" height="57" rx="4" fill="url(#spendGradient)"/><text x="661" y="208" fill="#64748b" font-size="12" text-anchor="middle" font-weight="600">Sep</text></g>
+          </svg>
+        </div>
+        <div class="chart-tooltip" id="chartTooltip"></div>
+
+        <!-- Category Breakdown Pill Row -->
+        <div class="chart-category-breakdown">
+          <span class="breakdown-title">Top Outflow Drivers:</span>
+          <span class="cat-pill">🍔 Food & Dining <strong>₹9,420</strong></span>
+          <span class="cat-pill">🛒 Shopping <strong>₹7,850</strong></span>
+          <span class="cat-pill">⚡ Utilities <strong>₹4,140</strong></span>
+          <span class="cat-pill">🚗 Commute <strong>₹3,150</strong></span>
+          <span class="cat-pill">🎬 Streaming <strong>₹1,849</strong></span>
+          <span class="cat-pill">🏥 Health & Fitness <strong>₹2,001</strong></span>
+        </div>
+      </section>
+
+      <!-- Bottom Grid: Recent Transactions & Smart Insights -->
+      <section class="bottom-grid">
+
+        <!-- Recent Transactions Box with High-Contrast Values -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <div>
+              <h2>Recent Transactions</h2>
+              <p class="box-subtitle">10 verified activities across linked accounts</p>
+            </div>
+            <div class="tx-header-actions">
+              <div class="tx-filter-group" role="group" aria-label="Transaction Filters">
+                <button class="tx-filter-btn active" data-filter="all">All (10)</button>
+                <button class="tx-filter-btn" data-filter="expense">Expense (8)</button>
+                <button class="tx-filter-btn" data-filter="income">Income (2)</button>
+              </div>
+              <a href="#" class="view-all-link">View All →</a>
+            </div>
+          </div>
+
+          <div class="tx-table-container">
+            <table class="tx-table" aria-label="Recent Transactions">
+              <thead>
+                <tr>
+                  <th>Merchant / Activity</th>
+                  <th>Category</th>
+                  <th class="tx-amount-header">Amount</th>
+                </tr>
+              </thead>
+              <tbody id="txTableBody">
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon shopping-icon">🛒</span>
+                      <div>
+                        <span class="tx-name">Amazon India</span>
+                        <span class="tx-date">Today, 2:45 PM • HDFC Card</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Shopping</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹1,240</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon media-icon">🎬</span>
+                      <div>
+                        <span class="tx-name">Netflix Premium 4K</span>
+                        <span class="tx-date">Today, 8:15 AM • Auto-Debit</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Entertainment</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹649</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="income">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon salary-icon">💼</span>
+                      <div>
+                        <span class="tx-name">TechCorp Salary Credit</span>
+                        <span class="tx-date">1 Sep, 10:00 AM • NEFT</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Income</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-positive">+₹65,000</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon food-icon">🍔</span>
+                      <div>
+                        <span class="tx-name">Zomato Gourmet</span>
+                        <span class="tx-date">Yesterday, 9:20 PM • UPI</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Food</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹560</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon travel-icon">🚗</span>
+                      <div>
+                        <span class="tx-name">Uber Premier Ride</span>
+                        <span class="tx-date">14 Sep, 6:30 PM • GPay</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Commute</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹340</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="income">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon freelance-icon">💻</span>
+                      <div>
+                        <span class="tx-name">Freelance UI Design Milestone</span>
+                        <span class="tx-date">12 Sep, 3:15 PM • Direct Transfer</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Income</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-positive">+₹18,500</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon util-icon">⚡</span>
+                      <div>
+                        <span class="tx-name">Adani Electricity Mumbai</span>
+                        <span class="tx-date">28 Aug, 4:10 PM • BillDesk</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Utilities</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹1,890</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon grocery-icon">🍎</span>
+                      <div>
+                        <span class="tx-name">Swiggy Instamart</span>
+                        <span class="tx-date">27 Aug, 11:45 AM • UPI</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Groceries</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹420</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon invest-icon">📈</span>
+                      <div>
+                        <span class="tx-name">Zerodha Coin Nifty 50 SIP</span>
+                        <span class="tx-date">25 Aug, 9:00 AM • Auto-Debit</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Investments</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹10,000</span>
+                  </td>
+                </tr>
+
+                <tr class="tx-item-row" data-type="expense">
+                  <td>
+                    <div class="tx-title-wrapper">
+                      <span class="tx-icon coffee-icon">☕</span>
+                      <div>
+                        <span class="tx-name">Starbucks Reserve</span>
+                        <span class="tx-date">24 Aug, 5:15 PM • ICICI Card</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="tx-category-tag">Food</span></td>
+                  <td class="tx-amount-col">
+                    <span class="tx-badge-negative">-₹380</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right Side Companion Column: Smart Insight Carousel & Category Budgets -->
+        <div class="side-column">
+
+          <!-- Polished Smart Insight Card with Multi-Insight Carousel -->
+          <div class="insight-box" aria-label="Smart Financial Insight">
+            <div class="insight-header">
+              <div class="insight-title-group">
+                <div class="insight-icon-bubble">💡</div>
+                <div>
+                  <h2>Smart Insight</h2>
+                  <span class="insight-badge">AI Assistant</span>
+                </div>
+              </div>
+              <div class="insight-nav-controls">
+                <button class="insight-nav-btn" id="prevInsightBtn" title="Previous tip">‹</button>
+                <span class="insight-page-num" id="insightCounter">1 of 3</span>
+                <button class="insight-nav-btn" id="nextInsightBtn" title="Next tip">›</button>
+              </div>
+            </div>
+
+            <div class="insight-content" id="insightContent">
+              <p>Food spending is up <strong>22%</strong> this month, mostly from delivery orders on weekdays.</p>
+              <p>Cutting <strong>2 orders a week</strong> could save about <strong>₹1,800/month</strong> towards your Net Worth target.</p>
+            </div>
+
+            <div class="insight-footer">
+              <button class="insight-action-btn" id="insightActionBtn">
+                <span id="insightActionText">🎯 Set Food Budget Rule</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Budgets Tracking Card -->
+          <div class="budget-box" aria-label="Category Budget Progress">
+            <div class="budget-header">
+              <div>
+                <h3>Category Budgets</h3>
+                <p class="budget-subtitle">Monthly allocations & limits</p>
+              </div>
+              <span class="budget-overall-tag">5 of 7 on track</span>
+            </div>
+
+            <div class="budget-items-list">
+              <!-- Food & Dining -->
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span class="budget-name">🍔 Food & Dining</span>
+                  <span class="budget-numbers warning-text">₹9,420 / ₹8,000 (117%)</span>
+                </div>
+                <div class="budget-progress-bg">
+                  <div class="budget-progress-bar bar-danger" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Shopping -->
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span class="budget-name">🛒 Shopping</span>
+                  <span class="budget-numbers">₹7,850 / ₹10,000 (78%)</span>
+                </div>
+                <div class="budget-progress-bg">
+                  <div class="budget-progress-bar bar-purple" style="width: 78%;"></div>
+                </div>
+              </div>
+
+              <!-- Utilities -->
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span class="budget-name">⚡ Utilities & Bills</span>
+                  <span class="budget-numbers">₹4,140 / ₹5,000 (82%)</span>
+                </div>
+                <div class="budget-progress-bg">
+                  <div class="budget-progress-bar bar-amber" style="width: 82%;"></div>
+                </div>
+              </div>
+
+              <!-- Commute -->
+              <div class="budget-item">
+                <div class="budget-info">
+                  <span class="budget-name">🚗 Commute & Travel</span>
+                  <span class="budget-numbers success-text">₹2,100 / ₹4,000 (52%)</span>
+                </div>
+                <div class="budget-progress-bg">
+                  <div class="budget-progress-bar bar-teal" style="width: 52%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal: Set Goal -->
+  <div class="modal-overlay" id="goalModal" role="dialog" aria-modal="true" aria-labelledby="goalModalTitle">
+    <a class="modal-backdrop" href="#" aria-label="Close dialog"></a>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="goalModalTitle">🎯 Define Financial Goal</h3>
+        <a class="modal-close" href="#" aria-label="Close dialog">&times;</a>
+      </div>
+      <form id="goalForm">
+        <div class="form-group">
+          <label for="goalName">Goal Name</label>
+          <input type="text" id="goalName" placeholder="e.g. Emergency Fund, New Car, Vacation" required>
+        </div>
+        <div class="form-group">
+          <label for="goalAmount">Target Capital (₹)</label>
+          <input type="number" id="goalAmount" placeholder="e.g. 100000" min="1000" required>
+        </div>
+        <div class="form-group">
+          <label for="goalDate">Target Completion Date</label>
+          <input type="date" id="goalDate" required>
+        </div>
+        <div class="modal-actions">
+          <a href="#" class="btn btn-secondary modal-close">Cancel</a>
+          <button type="submit" class="btn btn-primary">Save Goal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Add Transaction -->
+  <div class="modal-overlay" id="txModal" role="dialog" aria-modal="true" aria-labelledby="txModalTitle">
+    <a class="modal-backdrop" href="#" aria-label="Close dialog"></a>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="txModalTitle">+ Log New Transaction</h3>
+        <a class="modal-close" href="#" aria-label="Close dialog">&times;</a>
+      </div>
+      <form id="txForm">
+        <div class="form-group">
+          <label for="txTitle">Item / Merchant Name</label>
+          <input type="text" id="txTitle" placeholder="e.g. Starbucks, Flipkart, Freelance" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="txType">Transaction Type</label>
+            <select id="txType">
+              <option value="expense">Expense (-)</option>
+              <option value="income">Income (+)</option>
+            </select>
+          </div>
+          <div class="form-group half">
+            <label for="txCategory">Category</label>
+            <select id="txCategory">
+              <option value="Shopping">Shopping</option>
+              <option value="Food">Food & Dining</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Income">Salary / Income</option>
+              <option value="Entertainment">Entertainment</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="txAmount">Amount (₹)</label>
+          <input type="number" id="txAmount" placeholder="e.g. 1450" min="1" required>
+        </div>
+        <div class="modal-actions">
+          <a href="#" class="btn btn-secondary modal-close">Cancel</a>
+          <button type="submit" class="btn btn-primary">Record Transaction</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

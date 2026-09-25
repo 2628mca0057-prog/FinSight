@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Auto-Categorisation - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item active" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <div class="title-with-badge">
+            <h1>Auto-Categorisation Engine</h1>
+            <span class="beta-pill in-dev-pill">In Development</span>
+          </div>
+          <p class="subtitle">Self-learning classification models, merchant regex matchers, and custom tagging rules</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" type="button">
+            <span class="btn-icon">📋</span>
+            <span>Export Rules</span>
+          </button>
+          <button class="btn btn-primary" type="button">
+            <span class="btn-icon">+</span>
+            <span>Add Custom Rule</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Engine Stats -->
+      <section class="cards-grid" aria-label="Engine Performance Metrics">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Active ML Rules</span>
+            <span class="card-icon-pill">🪄</span>
+          </div>
+          <p class="card-value">18 Rules</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">6 core + 12 learned</span>
+          </div>
+          <span class="card-subtext">Automates 97% of bank feeds</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Classification Precision</span>
+            <span class="card-icon-pill">🎯</span>
+          </div>
+          <p class="card-value">99.2%</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">0 misclassifications</span>
+          </div>
+          <span class="card-subtext">Trained on 5,000+ Indian merchants</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Items Tagged</span>
+            <span class="card-icon-pill">🏷️</span>
+          </div>
+          <p class="card-value">142 Entries</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Across 3 accounts</span>
+          </div>
+          <span class="card-subtext">Avg 12ms tag latency</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Confidence Gate</span>
+            <span class="card-icon-pill">⚙️</span>
+          </div>
+          <p class="card-value">95.0%</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral">Threshold for auto-apply</span>
+          </div>
+          <span class="card-subtext">Flags lower scores for user review</span>
+        </div>
+      </section>
+
+      <!-- Rules Manager & Interactive Sandbox -->
+      <section class="bottom-grid">
+
+        <!-- Active Classification Rules List -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <div>
+              <h2>Active Merchant Match Rules</h2>
+              <p class="box-subtitle">Rules evaluated sequentially upon each incoming transaction</p>
+            </div>
+            <span class="ledger-tag">Auto-updating</span>
+          </div>
+
+          <div class="rules-list-container">
+            <!-- Rule 1: Food -->
+            <div class="rule-card-item">
+              <div class="rule-header-row">
+                <div class="rule-title-group">
+                  <span class="rule-icon">🍔</span>
+                  <div>
+                    <strong>Food & Dining Matcher</strong>
+                    <span class="rule-pattern">Contains: Zomato, Swiggy, Starbucks, McDonald's, Dominos</span>
+                  </div>
+                </div>
+                <span class="tx-category-tag">Food</span>
+              </div>
+              <div class="rule-stats-bar">
+                <span>Matched: 42 transactions</span>
+                <span class="success-text">Confidence: 99.8%</span>
+                <span class="rule-toggle active">Active</span>
+              </div>
+            </div>
+
+            <!-- Rule 2: Commute -->
+            <div class="rule-card-item">
+              <div class="rule-header-row">
+                <div class="rule-title-group">
+                  <span class="rule-icon">🚗</span>
+                  <div>
+                    <strong>Commute & Fuel Matcher</strong>
+                    <span class="rule-pattern">Contains: Uber, Ola, Rapido, Indian Oil, FASTag, Metro</span>
+                  </div>
+                </div>
+                <span class="tx-category-tag">Commute</span>
+              </div>
+              <div class="rule-stats-bar">
+                <span>Matched: 28 transactions</span>
+                <span class="success-text">Confidence: 98.6%</span>
+                <span class="rule-toggle active">Active</span>
+              </div>
+            </div>
+
+            <!-- Rule 3: Shopping -->
+            <div class="rule-card-item">
+              <div class="rule-header-row">
+                <div class="rule-title-group">
+                  <span class="rule-icon">🛒</span>
+                  <div>
+                    <strong>Retail & Shopping Matcher</strong>
+                    <span class="rule-pattern">Contains: Amazon, Flipkart, Myntra, Zara, Nykaa, Decathlon</span>
+                  </div>
+                </div>
+                <span class="tx-category-tag">Shopping</span>
+              </div>
+              <div class="rule-stats-bar">
+                <span>Matched: 31 transactions</span>
+                <span class="success-text">Confidence: 97.4%</span>
+                <span class="rule-toggle active">Active</span>
+              </div>
+            </div>
+
+            <!-- Rule 4: Utilities -->
+            <div class="rule-card-item">
+              <div class="rule-header-row">
+                <div class="rule-title-group">
+                  <span class="rule-icon">⚡</span>
+                  <div>
+                    <strong>Utilities & Telecom Matcher</strong>
+                    <span class="rule-pattern">Contains: Adani Electricity, Tata Power, Airtel, Jio, BillDesk</span>
+                  </div>
+                </div>
+                <span class="tx-category-tag">Utilities</span>
+              </div>
+              <div class="rule-stats-bar">
+                <span>Matched: 19 transactions</span>
+                <span class="success-text">Confidence: 99.9%</span>
+                <span class="rule-toggle active">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rule Builder & Sandbox -->
+        <div class="budget-box">
+          <div class="budget-header">
+            <div>
+              <h3>Add Custom Rule</h3>
+              <p class="budget-subtitle">Define automatic merchant pattern</p>
+            </div>
+          </div>
+
+          <form id="ruleForm" class="rule-builder-form">
+            <div class="form-group">
+              <label for="ruleKeyword">Merchant Keywords (comma-separated)</label>
+              <input type="text" id="ruleKeyword" placeholder="e.g. Cult.fit, Gold's Gym, Decathlon" required>
+            </div>
+
+            <div class="form-group">
+              <label for="ruleCategory">Assign Category</label>
+              <select id="ruleCategory" required>
+                <option value="Health">Health & Fitness</option>
+                <option value="Food">Food & Dining</option>
+                <option value="Shopping">Shopping & Retail</option>
+                <option value="Utilities">Utilities & Bills</option>
+                <option value="Commute">Commute & Travel</option>
+                <option value="Entertainment">Entertainment</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ruleConfidence">Confidence Threshold: <span id="confVal">95%</span></label>
+              <input type="range" id="ruleConfidence" min="80" max="99" value="95" oninput="document.getElementById('confVal').textContent = this.value + '%'">
+            </div>
+
+            <button type="submit" class="btn btn-primary full-btn">
+              <span>💾 Save Categorisation Rule</span>
+            </button>
+          </form>
+
+          <!-- Interactive Test Sandbox -->
+          <div class="sandbox-box">
+            <div class="sandbox-header">
+              <span class="sandbox-title">🧪 Model Simulation Sandbox</span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="sandboxInput" placeholder="Type sample merchant string to test..." value="Zomato Limited Mumbai IND">
+            </div>
+            <div class="sandbox-result" id="sandboxResult">
+              <span>Predicted Category:</span>
+              <strong class="positive-text">🍔 Food & Dining (99.8% Match)</strong>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

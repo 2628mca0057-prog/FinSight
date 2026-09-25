@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions Ledger - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item active">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <h1>Transactions Ledger</h1>
+          <p class="subtitle">Search, reconcile, and audit real-time cashflow across all accounts</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" id="exportBtn">
+            <span class="btn-icon">📥</span>
+            <span>Export CSV</span>
+          </button>
+          <a class="btn btn-primary" href="#txModal">
+            <span class="btn-icon">+</span>
+            <span>Add Transaction</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- Ledger Summary Stats -->
+      <section class="cards-grid" aria-label="Transaction Volume Stats">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Total Outflow</span>
+            <span class="card-icon-pill">💳</span>
+          </div>
+          <p class="card-value">₹28,410</p>
+          <div class="card-footer-row">
+            <span class="card-change negative">12 expense entries</span>
+          </div>
+          <span class="card-subtext">Avg: ₹2,367 per transaction</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Total Inflow</span>
+            <span class="card-icon-pill">💼</span>
+          </div>
+          <p class="card-value">₹83,500</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">2 credited deposits</span>
+          </div>
+          <span class="card-subtext">TechCorp Salary + Consulting</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Net Surplus</span>
+            <span class="card-icon-pill">📈</span>
+          </div>
+          <p class="card-value">+₹55,090</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">66.0% savings retained</span>
+          </div>
+          <span class="card-subtext">Cycle ending 30 Sep</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Reconciled Status</span>
+            <span class="card-icon-pill">✓</span>
+          </div>
+          <p class="card-value">14 / 14</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">100% matched to bank</span>
+          </div>
+          <span class="card-subtext">0 pending anomalies</span>
+        </div>
+      </section>
+
+      <!-- Search & Filters Toolbar -->
+      <section class="tx-toolbar-card">
+        <div class="tx-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="txLedgerSearch" placeholder="Search merchant, description, category, or amount...">
+        </div>
+
+        <div class="tx-toolbar-controls">
+          <div class="tx-filter-group">
+            <button class="tx-filter-btn active" data-filter="all">All (14)</button>
+            <button class="tx-filter-btn" data-filter="expense">Expenses (12)</button>
+            <button class="tx-filter-btn" data-filter="income">Income (2)</button>
+          </div>
+
+          <select class="tx-select-dropdown" id="categorySelectFilter">
+            <option value="all">All Categories</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Food">Food & Dining</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Income">Income / Salary</option>
+            <option value="Commute">Commute / Travel</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Investments">Investments</option>
+          </select>
+
+          <select class="tx-select-dropdown" id="accountSelectFilter">
+            <option value="all">All Accounts</option>
+            <option value="HDFC">HDFC Salary</option>
+            <option value="ICICI">ICICI Savings</option>
+            <option value="Zerodha">Zerodha SIP</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Detailed Ledger Table -->
+      <section class="transactions-box full-width-box">
+        <div class="box-header">
+          <div>
+            <h2>Verified Transaction Ledger</h2>
+            <p class="box-subtitle">Real-time ledger synced with HDFC & ICICI Open Banking APIs</p>
+          </div>
+          <span class="ledger-tag">Updated 4 mins ago</span>
+        </div>
+
+        <div class="tx-table-container">
+          <table class="tx-table" aria-label="Transactions Ledger">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Merchant / Details</th>
+                <th>Category</th>
+                <th>Payment Method</th>
+                <th>Status</th>
+                <th class="tx-amount-header">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="txLedgerBody">
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Shopping" data-acc="HDFC">
+                <td><span class="tx-date-cell">Today, 2:45 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🛒</span>
+                    <div>
+                      <span class="tx-name">Amazon India</span>
+                      <span class="tx-date">Electronics & Gadgets</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Shopping</span></td>
+                <td><span class="tx-method-pill">HDFC Millennia Card</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹1,240</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Entertainment" data-acc="HDFC">
+                <td><span class="tx-date-cell">Today, 8:15 AM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🎬</span>
+                    <div>
+                      <span class="tx-name">Netflix Premium 4K</span>
+                      <span class="tx-date">Monthly Subscription</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Entertainment</span></td>
+                <td><span class="tx-method-pill">Auto-Debit e-Mandate</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹649</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="income" data-cat="Income" data-acc="HDFC">
+                <td><span class="tx-date-cell">1 Sep, 10:00 AM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">💼</span>
+                    <div>
+                      <span class="tx-name">TechCorp Solutions Salary</span>
+                      <span class="tx-date">Ref: SAL-2026-AUG-8831</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Income</span></td>
+                <td><span class="tx-method-pill">NEFT Direct Credit</span></td>
+                <td><span class="tx-status-badge status-reconciled">Reconciled</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-positive">+₹65,000</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Food" data-acc="HDFC">
+                <td><span class="tx-date-cell">Yesterday, 9:20 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🍔</span>
+                    <div>
+                      <span class="tx-name">Zomato Gourmet</span>
+                      <span class="tx-date">Dinner Order #4829</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Food</span></td>
+                <td><span class="tx-method-pill">UPI / Google Pay</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹560</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Commute" data-acc="ICICI">
+                <td><span class="tx-date-cell">14 Sep, 6:30 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🚗</span>
+                    <div>
+                      <span class="tx-name">Uber Premier Ride</span>
+                      <span class="tx-date">BKC to Bandra West</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Commute</span></td>
+                <td><span class="tx-method-pill">Paytm Wallet</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹340</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="income" data-cat="Income" data-acc="ICICI">
+                <td><span class="tx-date-cell">12 Sep, 3:15 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">💻</span>
+                    <div>
+                      <span class="tx-name">Freelance UI Milestone</span>
+                      <span class="tx-date">Fintech Design Project</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Income</span></td>
+                <td><span class="tx-method-pill">IMPS Transfer</span></td>
+                <td><span class="tx-status-badge status-reconciled">Reconciled</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-positive">+₹18,500</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Utilities" data-acc="HDFC">
+                <td><span class="tx-date-cell">28 Aug, 4:10 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">⚡</span>
+                    <div>
+                      <span class="tx-name">Adani Electricity Mumbai</span>
+                      <span class="tx-date">Consumer #10294819</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Utilities</span></td>
+                <td><span class="tx-method-pill">BillDesk Auto-Pay</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹1,890</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Shopping" data-acc="HDFC">
+                <td><span class="tx-date-cell">27 Aug, 11:45 AM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🍎</span>
+                    <div>
+                      <span class="tx-name">Swiggy Instamart</span>
+                      <span class="tx-date">Daily Groceries</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Shopping</span></td>
+                <td><span class="tx-method-pill">UPI / PhonePe</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹420</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Investments" data-acc="Zerodha">
+                <td><span class="tx-date-cell">25 Aug, 9:00 AM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">📈</span>
+                    <div>
+                      <span class="tx-name">Zerodha Coin Nifty 50 SIP</span>
+                      <span class="tx-date">Monthly Direct Index Fund</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Investments</span></td>
+                <td><span class="tx-method-pill">NACH Mandate</span></td>
+                <td><span class="tx-status-badge status-reconciled">Reconciled</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹10,000</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Food" data-acc="ICICI">
+                <td><span class="tx-date-cell">24 Aug, 5:15 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">☕</span>
+                    <div>
+                      <span class="tx-name">Starbucks Reserve</span>
+                      <span class="tx-date">Coffee & Snacks</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Food</span></td>
+                <td><span class="tx-method-pill">ICICI Sapphiro Card</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹380</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Utilities" data-acc="HDFC">
+                <td><span class="tx-date-cell">20 Aug, 2:00 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">📶</span>
+                    <div>
+                      <span class="tx-name">Airtel Fiber Broadband</span>
+                      <span class="tx-date">200 Mbps Fiber Plan</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Utilities</span></td>
+                <td><span class="tx-method-pill">Airtel Thanks App</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹1,179</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Shopping" data-acc="HDFC">
+                <td><span class="tx-date-cell">18 Aug, 7:15 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">👕</span>
+                    <div>
+                      <span class="tx-name">Zara Lifestyle</span>
+                      <span class="tx-date">Phoenix Palladium Store</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Shopping</span></td>
+                <td><span class="tx-method-pill">POS Swipe HDFC</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹4,290</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Commute" data-acc="ICICI">
+                <td><span class="tx-date-cell">15 Aug, 10:30 AM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">⛽</span>
+                    <div>
+                      <span class="tx-name">Indian Oil Petrol Pump</span>
+                      <span class="tx-date">Auto Fueling Bandra</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Commute</span></td>
+                <td><span class="tx-method-pill">ICICI FASTag / Card</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹2,500</span></td>
+              </tr>
+
+              <tr class="tx-ledger-row" data-type="expense" data-cat="Entertainment" data-acc="HDFC">
+                <td><span class="tx-date-cell">10 Aug, 8:45 PM</span></td>
+                <td>
+                  <div class="tx-title-wrapper">
+                    <span class="tx-icon">🎟️</span>
+                    <div>
+                      <span class="tx-name">BookMyShow IMAX</span>
+                      <span class="tx-date">2 Tickets Sci-Fi Feature</span>
+                    </div>
+                  </div>
+                </td>
+                <td><span class="tx-category-tag">Entertainment</span></td>
+                <td><span class="tx-method-pill">BMS Cashless</span></td>
+                <td><span class="tx-status-badge status-completed">Completed</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹940</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="tx-pagination-bar">
+          <span class="pagination-info">Showing 1 to 14 of 14 entries</span>
+          <div class="pagination-buttons">
+            <button class="page-btn disabled" disabled>‹ Prev</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn disabled" disabled>Next ›</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal: Add Transaction -->
+  <div class="modal-overlay" id="txModal" role="dialog" aria-modal="true" aria-labelledby="txModalTitle">
+    <a class="modal-backdrop" href="#" aria-label="Close dialog"></a>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="txModalTitle">+ Log New Transaction</h3>
+        <a class="modal-close" href="#" aria-label="Close dialog">&times;</a>
+      </div>
+      <form id="txForm">
+        <div class="form-group">
+          <label for="txTitle">Item / Merchant Name</label>
+          <input type="text" id="txTitle" placeholder="e.g. Starbucks, Flipkart, Freelance" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="txType">Transaction Type</label>
+            <select id="txType">
+              <option value="expense">Expense (-)</option>
+              <option value="income">Income (+)</option>
+            </select>
+          </div>
+          <div class="form-group half">
+            <label for="txCategory">Category</label>
+            <select id="txCategory">
+              <option value="Shopping">Shopping</option>
+              <option value="Food">Food & Dining</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Income">Salary / Income</option>
+              <option value="Commute">Commute / Travel</option>
+              <option value="Entertainment">Entertainment</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="txAmount">Amount (₹)</label>
+          <input type="number" id="txAmount" placeholder="e.g. 1450" min="1" required>
+        </div>
+        <div class="modal-actions">
+          <a href="#" class="btn btn-secondary modal-close">Cancel</a>
+          <button type="submit" class="btn btn-primary">Record Transaction</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

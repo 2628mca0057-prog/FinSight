@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart AI Insights - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item active">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <h1>Smart Financial Insights</h1>
+          <p class="subtitle">AI-generated recommendations to unlock liquidity, minimize recurring leakages, and optimize taxes</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" id="rulesBtn">
+            <span class="btn-icon">⚙️</span>
+            <span>Alert Rules</span>
+          </button>
+          <button class="btn btn-primary" id="autoApplyBtn">
+            <span class="btn-icon">⚡</span>
+            <span>Auto-Optimize</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Insights Summary Stats -->
+      <section class="cards-grid" aria-label="Savings Opportunity Overview">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Potential Annual Savings</span>
+            <span class="card-icon-pill">💡</span>
+          </div>
+          <p class="card-value">₹32,400 / yr</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">From 4 optimization tips</span>
+          </div>
+          <span class="card-subtext">~₹2,700/mo surplus potential</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Yield Opportunity</span>
+            <span class="card-icon-pill">📈</span>
+          </div>
+          <p class="card-value">+₹7,800 / yr</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Auto-Sweep FD arbitrage</span>
+          </div>
+          <span class="card-subtext">6.8% vs 2.7% on ₹1.45L idle cash</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Inactive Subscriptions</span>
+            <span class="card-icon-pill">🎬</span>
+          </div>
+          <p class="card-value">2 Services</p>
+          <div class="card-footer-row">
+            <span class="card-change negative">₹949 / month leakage</span>
+          </div>
+          <span class="card-subtext">Zero usage logged in 35 days</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Tax Deduction Room</span>
+            <span class="card-icon-pill">🛡️</span>
+          </div>
+          <p class="card-value">₹45,000</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral">Save up to ₹13,500 tax</span>
+          </div>
+          <span class="card-subtext">80C headroom before March 2027</span>
+        </div>
+      </section>
+
+      <!-- Insights List Grid -->
+      <section class="insights-feed-section">
+        <div class="section-title-row">
+          <h2>Active Advisory Recommendations</h2>
+          <span class="ai-status-pill">🤖 AI Confidence: High (98%)</span>
+        </div>
+
+        <div class="insights-cards-column">
+
+          <!-- Insight 1: Dining Delivery -->
+          <div class="insight-feed-card card-priority-high">
+            <div class="feed-card-header">
+              <div class="feed-badge-group">
+                <span class="feed-icon">🍔</span>
+                <div>
+                  <h3>Food Delivery Surcharge & Order Volume</h3>
+                  <span class="feed-meta">Expense Optimization • High Priority</span>
+                </div>
+              </div>
+              <div class="impact-pill impact-positive">Save ~₹1,800/month</div>
+            </div>
+            <div class="feed-card-body">
+              <p>Your dining out spending is within reasonable bounds, but weekday evening orders on food delivery apps have climbed <strong>22% this cycle</strong>. Reducing delivery orders by just <strong>2 meals per week</strong> channels ₹1,800 back into your liquid savings fund.</p>
+            </div>
+            <div class="feed-card-actions">
+              <button class="btn btn-primary" type="button">🎯 Configure Food Budget Cap</button>
+              <button class="btn btn-secondary" type="button">Dismiss for Now</button>
+            </div>
+          </div>
+
+          <!-- Insight 2: Auto-Sweep Yield -->
+          <div class="insight-feed-card card-priority-high">
+            <div class="feed-card-header">
+              <div class="feed-badge-group">
+                <span class="feed-icon">⚡</span>
+                <div>
+                  <h3>High Idle Cash in Standard Savings Account</h3>
+                  <span class="feed-meta">Yield Maximization • High Priority</span>
+                </div>
+              </div>
+              <div class="impact-pill impact-positive">Earn +₹650/month (+₹7,800/yr)</div>
+            </div>
+            <div class="feed-card-body">
+              <p>You currently maintain <strong>₹1,45,000</strong> in your secondary ICICI Savings Account earning a baseline <strong>2.70% p.a.</strong> Activating linked <strong>Auto-Sweep Fixed Deposit</strong> auto-earns <strong>6.80% p.a.</strong> without locking funds or sacrificing instant liquidity.</p>
+            </div>
+            <div class="feed-card-actions">
+              <button class="btn btn-primary" type="button">⚡ Enable Auto-Sweep Linkage</button>
+              <button class="btn btn-secondary" type="button">Remind in 7 Days</button>
+            </div>
+          </div>
+
+          <!-- Insight 3: Subscriptions Audit -->
+          <div class="insight-feed-card card-priority-medium">
+            <div class="feed-card-header">
+              <div class="feed-badge-group">
+                <span class="feed-icon">🎬</span>
+                <div>
+                  <h3>Recurring Streaming Subscriptions Audit</h3>
+                  <span class="feed-meta">Subscription Audit • Medium Priority</span>
+                </div>
+              </div>
+              <div class="impact-pill impact-negative">Save ₹949/month (₹11,388/yr)</div>
+            </div>
+            <div class="feed-card-body">
+              <p>FinSight identified <strong>4 concurrent digital streaming mandates</strong> totaling <strong>₹1,849/month</strong>. Netflix 4K is frequently accessed, but 2 active services recorded zero playback usage over the past 35 days.</p>
+            </div>
+            <div class="feed-card-actions">
+              <button class="btn btn-secondary" type="button">🔍 Review & Pause Mandates</button>
+              <button class="btn btn-secondary" type="button">Keep All Active</button>
+            </div>
+          </div>
+
+          <!-- Insight 4: Section 80C Tax Headroom -->
+          <div class="insight-feed-card card-priority-medium">
+            <div class="feed-card-header">
+              <div class="feed-badge-group">
+                <span class="feed-icon">📑</span>
+                <div>
+                  <h3>Section 80C Tax Savings Headroom</h3>
+                  <span class="feed-meta">Tax Planning • Annual Window</span>
+                </div>
+              </div>
+              <div class="impact-pill impact-positive">Save Up to ₹13,500 Tax</div>
+            </div>
+            <div class="feed-card-body">
+              <p>Your current 80C deduction footprint is ₹1,05,000 through Provident Fund. You have <strong>₹45,000 remaining headroom</strong> before 31 March. Allocating this via ELSS Mutual Funds saves 30% direct tax while building equity corpus.</p>
+            </div>
+            <div class="feed-card-actions">
+              <button class="btn btn-secondary" type="button">📈 Explore ELSS Tax-Savers</button>
+              <button class="btn btn-secondary" type="button">Bookmark for Q4</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

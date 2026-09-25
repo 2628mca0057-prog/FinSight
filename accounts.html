@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounts & Portfolio - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item active">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <h1>Accounts & Portfolios</h1>
+          <p class="subtitle">Consolidated view of liquid reserves, demat holdings, and credit limits</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" id="transferBtn">
+            <span class="btn-icon">🔁</span>
+            <span>Transfer Funds</span>
+          </button>
+          <button class="btn btn-primary" id="linkAccountBtn">
+            <span class="btn-icon">+</span>
+            <span>Link Account</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Account Summary KPI Cards -->
+      <section class="cards-grid" aria-label="Consolidated Balances">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Total Liquid Cash</span>
+            <span class="card-icon-pill">🏦</span>
+          </div>
+          <p class="card-value">₹4,29,500</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Across 2 bank accounts</span>
+          </div>
+          <span class="card-subtext">HDFC Salary + ICICI Reserve</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Investment Portfolio</span>
+            <span class="card-icon-pill">📈</span>
+          </div>
+          <p class="card-value">₹4,12,800</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">▲ +18.4% all-time gain</span>
+          </div>
+          <span class="card-subtext">Zerodha Demat • 3 active SIPs</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Credit Card Dues</span>
+            <span class="card-icon-pill">💳</span>
+          </div>
+          <p class="card-value">₹18,410</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral">Due on 12 Oct</span>
+          </div>
+          <span class="card-subtext">HDFC Regalia Gold (Limit: ₹4.0L)</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Net Asset Worth</span>
+            <span class="card-icon-pill">🛡️</span>
+          </div>
+          <p class="card-value">₹8,42,300</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">▲ 3.2% this month</span>
+          </div>
+          <span class="card-subtext">Assets: ₹8.6L • Debt: ₹18.4k</span>
+        </div>
+      </section>
+
+      <!-- Visual Account Cards Grid -->
+      <section class="account-cards-section">
+        <div class="section-title-row">
+          <h2>Linked Accounts & Cards</h2>
+          <span class="security-badge">🔒 256-Bit Bank Grade Sync</span>
+        </div>
+
+        <div class="accounts-grid">
+          <!-- Card 1: HDFC Bank -->
+          <div class="bank-card card-hdfc">
+            <div class="bank-card-top">
+              <div class="bank-brand">
+                <span class="bank-logo-text">HDFC BANK</span>
+                <span class="bank-acc-type">Corporate Salary Account</span>
+              </div>
+              <span class="sync-status-indicator live" title="Live Auto-Sync Active">● Live Sync</span>
+            </div>
+            <div class="bank-card-number">•••• •••• •••• 8831</div>
+            <div class="bank-card-bottom">
+              <div>
+                <span class="bank-label">Available Balance</span>
+                <p class="bank-balance">₹2,84,500.00</p>
+              </div>
+              <div class="bank-chip"></div>
+            </div>
+            <div class="bank-card-footer">
+              <span>Primary Operating A/c</span>
+              <span>IFSC: HDFC0001241</span>
+            </div>
+          </div>
+
+          <!-- Card 2: ICICI Bank -->
+          <div class="bank-card card-icici">
+            <div class="bank-card-top">
+              <div class="bank-brand">
+                <span class="bank-logo-text">ICICI BANK</span>
+                <span class="bank-acc-type">iMobile Privilege Savings</span>
+              </div>
+              <span class="sync-status-indicator live" title="Live Auto-Sync Active">● Live Sync</span>
+            </div>
+            <div class="bank-card-number">•••• •••• •••• 4109</div>
+            <div class="bank-card-bottom">
+              <div>
+                <span class="bank-label">Available Balance</span>
+                <p class="bank-balance">₹1,45,000.00</p>
+              </div>
+              <div class="bank-chip"></div>
+            </div>
+            <div class="bank-card-footer">
+              <span>Auto-Sweep Enabled (6.8%)</span>
+              <span>IFSC: ICIC0000842</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Zerodha -->
+          <div class="bank-card card-zerodha">
+            <div class="bank-card-top">
+              <div class="bank-brand">
+                <span class="bank-logo-text">ZERODHA</span>
+                <span class="bank-acc-type">Demat & Mutual Funds</span>
+              </div>
+              <span class="sync-status-indicator live" title="Live Auto-Sync Active">● Synced</span>
+            </div>
+            <div class="bank-card-number">UCC: NT9021 • CDSL</div>
+            <div class="bank-card-bottom">
+              <div>
+                <span class="bank-label">Portfolio Valuation</span>
+                <p class="bank-balance">₹4,12,800.00</p>
+              </div>
+              <div class="demat-badge">+18.4% Return</div>
+            </div>
+            <div class="bank-card-footer">
+              <span>3 Active SIPs (₹10k/mo)</span>
+              <span>Nifty 50, Flexi, Midcap</span>
+            </div>
+          </div>
+
+          <!-- Card 4: HDFC Regalia Credit Card -->
+          <div class="bank-card card-regalia">
+            <div class="bank-card-top">
+              <div class="bank-brand">
+                <span class="bank-logo-text">HDFC REGALIA GOLD</span>
+                <span class="bank-acc-type">Visa Signature Credit Card</span>
+              </div>
+              <span class="sync-status-indicator card-alert">Bill Due in 27d</span>
+            </div>
+            <div class="bank-card-number">•••• •••• •••• 6022</div>
+            <div class="bank-card-bottom">
+              <div>
+                <span class="bank-label">Current Unbilled Spend</span>
+                <p class="bank-balance">₹18,410.00</p>
+              </div>
+              <span class="card-limit-info">Limit: ₹4,00,000</span>
+            </div>
+            <div class="bank-card-footer">
+              <span>Available Limit: ₹3,81,590</span>
+              <span>Points: 14,200 pts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Transfer & Asset Distribution Section -->
+      <section class="bottom-grid">
+
+        <!-- Quick Transfer Tool -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <div>
+              <h2>Instant Inter-Account Transfer</h2>
+              <p class="box-subtitle">Seamlessly reallocate liquidity between linked bank accounts</p>
+            </div>
+          </div>
+
+          <form id="transferForm" class="quick-transfer-form">
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="transferFrom">From Account</label>
+                <select id="transferFrom" required>
+                  <option value="HDFC">HDFC Salary A/c (₹2,84,500)</option>
+                  <option value="ICICI">ICICI Savings A/c (₹1,45,000)</option>
+                </select>
+              </div>
+              <div class="form-group half">
+                <label for="transferTo">To Account</label>
+                <select id="transferTo" required>
+                  <option value="ICICI">ICICI Savings A/c (₹1,45,000)</option>
+                  <option value="HDFC">HDFC Salary A/c (₹2,84,500)</option>
+                  <option value="Zerodha">Zerodha Trading Wallet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="transferAmount">Transfer Amount (₹)</label>
+              <input type="number" id="transferAmount" placeholder="e.g. 25000" min="500" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary transfer-submit-btn">
+              <span>🔁 Execute Transfer</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Asset Distribution Allocation -->
+        <div class="budget-box">
+          <div class="budget-header">
+            <div>
+              <h3>Portfolio Allocation</h3>
+              <p class="budget-subtitle">Target asset diversification</p>
+            </div>
+            <span class="budget-overall-tag">Optimal Balance</span>
+          </div>
+
+          <div class="budget-items-list">
+            <div class="budget-item">
+              <div class="budget-info">
+                <span class="budget-name">💼 Equity & Mutual Funds</span>
+                <span class="budget-numbers">₹4,12,800 (49%)</span>
+              </div>
+              <div class="budget-progress-bg">
+                <div class="budget-progress-bar bar-teal" style="width: 49%;"></div>
+              </div>
+            </div>
+
+            <div class="budget-item">
+              <div class="budget-info">
+                <span class="budget-name">🏦 Liquid Bank Reserves</span>
+                <span class="budget-numbers">₹4,29,500 (51%)</span>
+              </div>
+              <div class="budget-progress-bg">
+                <div class="budget-progress-bar bar-purple" style="width: 51%;"></div>
+              </div>
+            </div>
+
+            <div class="budget-item">
+              <div class="budget-info">
+                <span class="budget-name">💳 Credit Utilization</span>
+                <span class="budget-numbers success-text">4.6% of ₹4.0L limit</span>
+              </div>
+              <div class="budget-progress-bg">
+                <div class="budget-progress-bar bar-amber" style="width: 4.6%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

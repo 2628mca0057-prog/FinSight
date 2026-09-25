@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments Apps Integration - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item active" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <div class="title-with-badge">
+            <h1>Payments Apps & UPI Integration</h1>
+            <span class="beta-pill">Coming Soon</span>
+          </div>
+          <p class="subtitle">Direct real-time synchronization with UPI handles, payment apps, and on-device bank notification parsers</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" type="button">
+            <span class="btn-icon">🔄</span>
+            <span>Sync All Now</span>
+          </button>
+          <button class="btn btn-primary" type="button">
+            <span class="btn-icon">+</span>
+            <span>Connect Gateway</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Integration Metrics -->
+      <section class="cards-grid" aria-label="Gateway Sync Health">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Connected Gateways</span>
+            <span class="card-icon-pill">⚡</span>
+          </div>
+          <p class="card-value">5 Services</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">100% operational</span>
+          </div>
+          <span class="card-subtext">GPay, PhonePe, CRED, Paytm, SMS</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Sync Latency</span>
+            <span class="card-icon-pill">⏱️</span>
+          </div>
+          <p class="card-value">&lt; 3 Seconds</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Instant webhook triggers</span>
+          </div>
+          <span class="card-subtext">Zero end-of-day batch delay</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Synced Monthly Volume</span>
+            <span class="card-icon-pill">💳</span>
+          </div>
+          <p class="card-value">₹83,500</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">14 transactions captured</span>
+          </div>
+          <span class="card-subtext">Seamless reconciliation</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Security Architecture</span>
+            <span class="card-icon-pill">🔒</span>
+          </div>
+          <p class="card-value">256-Bit SSL</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Zero-knowledge local keys</span>
+          </div>
+          <span class="card-subtext">RBI Account Aggregator compliant</span>
+        </div>
+      </section>
+
+      <!-- Integration Cards Grid -->
+      <section class="integration-cards-section">
+        <div class="section-title-row">
+          <h2>Active Payment Integrations</h2>
+          <span class="security-badge">🔒 End-to-End Encrypted</span>
+        </div>
+
+        <div class="integration-grid">
+          <!-- Google Pay -->
+          <div class="gateway-card">
+            <div class="gateway-header">
+              <div class="gateway-brand">
+                <span class="gateway-icon">🔵</span>
+                <div>
+                  <strong>Google Pay (GPay)</strong>
+                  <span class="gateway-meta">UPI Handle: nikhil@okaxis</span>
+                </div>
+              </div>
+              <span class="sync-status-indicator live">● Connected</span>
+            </div>
+            <p class="gateway-desc">Captures instant push notifications and UPI QR transfers initiated via Google Pay.</p>
+            <div class="gateway-footer">
+              <span class="gateway-stats">28 transactions synced this cycle</span>
+              <button class="btn-micro" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <!-- PhonePe -->
+          <div class="gateway-card">
+            <div class="gateway-header">
+              <div class="gateway-brand">
+                <span class="gateway-icon">🟣</span>
+                <div>
+                  <strong>PhonePe</strong>
+                  <span class="gateway-meta">UPI Handle: nikhil@ybl</span>
+                </div>
+              </div>
+              <span class="sync-status-indicator live">● Connected</span>
+            </div>
+            <p class="gateway-desc">Auto-syncs utility bills, mobile recharges, and merchant scan-and-pay transactions.</p>
+            <div class="gateway-footer">
+              <span class="gateway-stats">18 transactions synced this cycle</span>
+              <button class="btn-micro" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <!-- CRED -->
+          <div class="gateway-card">
+            <div class="gateway-header">
+              <div class="gateway-brand">
+                <span class="gateway-icon">⚫</span>
+                <div>
+                  <strong>CRED Pay & Cards</strong>
+                  <span class="gateway-meta">HDFC Regalia & ICICI Cards</span>
+                </div>
+              </div>
+              <span class="sync-status-indicator live">● Connected</span>
+            </div>
+            <p class="gateway-desc">Real-time credit card statement reconciliation, unbilled transactions, and bill due reminders.</p>
+            <div class="gateway-footer">
+              <span class="gateway-stats">14 card transactions synced</span>
+              <button class="btn-micro" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <!-- Paytm -->
+          <div class="gateway-card">
+            <div class="gateway-header">
+              <div class="gateway-brand">
+                <span class="gateway-icon">🔷</span>
+                <div>
+                  <strong>Paytm UPI & FASTag</strong>
+                  <span class="gateway-meta">Wallet & Vehicle FASTag</span>
+                </div>
+              </div>
+              <span class="sync-status-indicator live">● Connected</span>
+            </div>
+            <p class="gateway-desc">Captures highway toll deductions and quick micro-wallet payments automatically.</p>
+            <div class="gateway-footer">
+              <span class="gateway-stats">6 transactions synced this cycle</span>
+              <button class="btn-micro" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <!-- On-Device SMS Parser -->
+          <div class="gateway-card gateway-card-highlight">
+            <div class="gateway-header">
+              <div class="gateway-brand">
+                <span class="gateway-icon">📱</span>
+                <div>
+                  <strong>On-Device Bank SMS Engine</strong>
+                  <span class="gateway-meta">Local Sandboxed Processing</span>
+                </div>
+              </div>
+              <span class="sync-status-indicator live">● Active</span>
+            </div>
+            <p class="gateway-desc">Reads incoming bank debit/credit SMS locally on your device with 0 cloud transmission. Privacy-first architecture.</p>
+            <div class="gateway-footer">
+              <span class="gateway-stats">100% Private • Local NLP Model</span>
+              <button class="btn-micro" type="button">Config</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Sync Activity Log Table -->
+      <section class="transactions-box full-width-box">
+        <div class="box-header">
+          <div>
+            <h2>Real-Time Sync Stream</h2>
+            <p class="box-subtitle">Live events delivered via UPI gateway webhooks</p>
+          </div>
+          <span class="ledger-tag">Live Stream Active</span>
+        </div>
+
+        <div class="tx-table-container">
+          <table class="tx-table" aria-label="Sync Stream">
+            <thead>
+              <tr>
+                <th>Sync Timestamp</th>
+                <th>Source Gateway</th>
+                <th>Detected Transaction</th>
+                <th>Reconciliation Status</th>
+                <th class="tx-amount-header">Synced Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Just now</td>
+                <td><span class="tx-method-pill">Google Pay</span></td>
+                <td><strong>Amazon India</strong> • HDFC Card</td>
+                <td><span class="tx-status-badge status-completed">Instant Webhook</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹1,240</span></td>
+              </tr>
+              <tr>
+                <td>Today, 8:15 AM</td>
+                <td><span class="tx-method-pill">CRED</span></td>
+                <td><strong>Netflix 4K</strong> • e-Mandate</td>
+                <td><span class="tx-status-badge status-reconciled">Auto-Matched</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹649</span></td>
+              </tr>
+              <tr>
+                <td>Yesterday, 9:20 PM</td>
+                <td><span class="tx-method-pill">PhonePe</span></td>
+                <td><strong>Zomato Gourmet</strong> • UPI Push</td>
+                <td><span class="tx-status-badge status-completed">Instant Webhook</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹560</span></td>
+              </tr>
+              <tr>
+                <td>14 Sep, 6:30 PM</td>
+                <td><span class="tx-method-pill">Paytm</span></td>
+                <td><strong>Uber Premier</strong> • Wallet Debit</td>
+                <td><span class="tx-status-badge status-completed">Instant Webhook</span></td>
+                <td class="tx-amount-col"><span class="tx-badge-negative">-₹340</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart OCR Bill Scanner - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item active" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <div class="title-with-badge">
+            <h1>Smart OCR Bill Scanner</h1>
+            <span class="beta-pill">Labs Beta</span>
+          </div>
+          <p class="subtitle">Drag and drop receipts or paper invoices for instant line-item OCR recognition and expense logging</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" type="button">
+            <span class="btn-icon">📷</span>
+            <span>Camera Scan</span>
+          </button>
+          <label class="btn btn-primary" for="receiptFileInput">
+            <span class="btn-icon">⬆️</span>
+            <span>Upload Receipt</span>
+          </label>
+          <input type="file" id="receiptFileInput" style="display: none;" accept="image/*,application/pdf">
+        </div>
+      </header>
+
+      <!-- Scanner Stats -->
+      <section class="cards-grid" aria-label="OCR Engine Metrics">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Bills Parsed</span>
+            <span class="card-icon-pill">🧾</span>
+          </div>
+          <p class="card-value">24 Documents</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">100% verification rate</span>
+          </div>
+          <span class="card-subtext">PDFs, JPEGs, and paper scans</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">OCR Precision</span>
+            <span class="card-icon-pill">🎯</span>
+          </div>
+          <p class="card-value">99.4%</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Neural visual parser</span>
+          </div>
+          <span class="card-subtext">Auto-detects GSTIN, date, & tax</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Total Extracted Sum</span>
+            <span class="card-icon-pill">💰</span>
+          </div>
+          <p class="card-value">₹42,890</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Reconciled to accounts</span>
+          </div>
+          <span class="card-subtext">Direct to ledger sync</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Time Saved</span>
+            <span class="card-icon-pill">⚡</span>
+          </div>
+          <p class="card-value">~4.2 Hours</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">Zero manual keyboard entry</span>
+          </div>
+          <span class="card-subtext">Avg 1.2s parse time per page</span>
+        </div>
+      </section>
+
+      <!-- Interactive Workbench Section -->
+      <section class="bottom-grid">
+
+        <!-- Upload Dropzone Area -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <div>
+              <h2>Drop Receipt or Invoice</h2>
+              <p class="box-subtitle">Supports PDF, PNG, JPG, and HEIC up to 25MB</p>
+            </div>
+          </div>
+
+          <label class="scanner-dropzone" id="dropzoneBox" for="receiptFileInput">
+            <div class="dropzone-icon">📥</div>
+            <h3>Drag & Drop Receipt Here</h3>
+            <p>or <span class="browse-link">browse files</span> from your computer</p>
+            <span class="dropzone-hint">Instant detection of total amount, merchant, GST, and dates</span>
+          </label>
+
+          <!-- Sample Pre-loaded Invoices -->
+          <div class="sample-bills-bar">
+            <span class="sample-label">Or test with a sample bill:</span>
+            <div class="sample-buttons">
+              <button class="sample-btn active" id="sampleStarbucksBtn">☕ Starbucks Receipt</button>
+              <button class="sample-btn" id="sampleElectricityBtn">⚡ Adani Power Bill</button>
+              <button class="sample-btn" id="sampleAmazonBtn">🛒 Amazon Invoice</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Parsed OCR Results Preview Card -->
+        <div class="budget-box ocr-preview-box">
+          <div class="budget-header">
+            <div>
+              <h3>Parsed Receipt Metadata</h3>
+              <p class="budget-subtitle">Neural OCR Extraction</p>
+            </div>
+            <span class="ocr-confidence-tag">99.8% Match</span>
+          </div>
+
+          <div class="parsed-details-list" id="parsedDataView">
+            <div class="parsed-field">
+              <span class="field-label">Detected Merchant:</span>
+              <strong class="field-value" id="ocrMerchant">Starbucks Coffee India</strong>
+            </div>
+
+            <div class="parsed-field">
+              <span class="field-label">Receipt Date:</span>
+              <strong class="field-value" id="ocrDate">14 Sep 2026, 05:15 PM</strong>
+            </div>
+
+            <div class="parsed-field">
+              <span class="field-label">Invoice / Receipt No:</span>
+              <strong class="field-value" id="ocrInvoice">SBX-MUM-2026-99214</strong>
+            </div>
+
+            <div class="parsed-field">
+              <span class="field-label">Extracted Category:</span>
+              <span class="tx-category-tag" id="ocrCategory">Food & Dining</span>
+            </div>
+
+            <div class="parsed-items-table">
+              <div class="item-row">
+                <span>1x Caffe Latte (Grande)</span>
+                <span>₹310.00</span>
+              </div>
+              <div class="item-row">
+                <span>1x Blueberry Muffin</span>
+                <span>₹190.00</span>
+              </div>
+              <div class="item-row text-muted">
+                <span>CGST / SGST (5%)</span>
+                <span>₹25.00</span>
+              </div>
+              <div class="item-row total-row">
+                <strong>Total Amount Detected:</strong>
+                <strong class="highlight-val" id="ocrTotal">₹525.00</strong>
+              </div>
+            </div>
+
+            <div class="parsed-actions-row">
+              <button class="btn btn-primary full-btn" id="addParsedTxBtn">
+                <span>✓ Confirm & Add to Expenses</span>
+              </button>
+              <button class="btn btn-secondary full-btn" type="button">
+                <span>✎ Edit Fields</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
