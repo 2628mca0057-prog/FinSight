@@ -1,0 +1,13 @@
+{
+  "name": "finsight",
+  "version": "1.0.0",
+  "description": "FinSight — The Smart Wealth Manager",
+  "main": "dev-server.js",
+  "scripts": {
+    "start": "node dev-server.js",
+    "dev": "node dev-server.js"
+  },
+  "author": "Nikhil Tyagi",
+  "license": "ISC"
+}
+

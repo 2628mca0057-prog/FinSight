@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Goals & Targets - FinSight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.svg" alt="FinSight logo" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-item">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Dashboard</span>
+          <span class="nav-badge active-badge">Live</span>
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <span class="nav-icon">💸</span>
+          <span class="nav-label">Transactions</span>
+          <span class="nav-badge">14</span>
+        </a>
+        <a href="accounts.html" class="nav-item">
+          <span class="nav-icon">🏦</span>
+          <span class="nav-label">Accounts</span>
+          <span class="nav-badge" id="accountsNavBadge">3</span>
+        </a>
+        <a href="goals.html" class="nav-item active">
+          <span class="nav-icon">🎯</span>
+          <span class="nav-label">Goals</span>
+          <span class="nav-badge" id="goalsNavBadge">4</span>
+        </a>
+        <a href="analytics.html" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span class="nav-label">Analytics</span>
+          <span class="nav-badge pro-badge">Pro</span>
+        </a>
+        <a href="insights.html" class="nav-item">
+          <span class="nav-icon">💡</span>
+          <span class="nav-label">Smart Insights</span>
+          <span class="nav-badge-alert">3 New</span>
+        </a>
+      </nav>
+
+      <!-- Upcoming Features Section -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-header">
+          <span class="section-title">Upcoming Features</span>
+          <span class="section-badge">Labs</span>
+        </div>
+        <div class="upcoming-menu">
+          <a href="bill-scanner.html" class="upcoming-item" title="Smart OCR receipt and invoice scanner">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🧾</span>
+              <div>
+                <span class="upcoming-label">Bill Scanner</span>
+                <span class="upcoming-sub">OCR Auto-Import</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Q4 Beta</span>
+          </a>
+
+          <a href="auto-categorisation.html" class="upcoming-item" title="AI automated merchant and expense categorisation">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">🪄</span>
+              <div>
+                <span class="upcoming-label">Auto Categorisation</span>
+                <span class="upcoming-sub">ML Tag Engine</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">In Dev</span>
+          </a>
+
+          <a href="payments-integration.html" class="upcoming-item" title="Instant sync with UPI, Google Pay & PhonePe">
+            <div class="upcoming-main">
+              <span class="upcoming-icon">⚡</span>
+              <div>
+                <span class="upcoming-label">Integration with Payments App</span>
+                <span class="upcoming-sub">UPI & GPay Sync</span>
+              </div>
+            </div>
+            <span class="upcoming-status-tag">Soon</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Profile Box -->
+      <div class="user-box">
+        <div class="avatar">NT</div>
+        <div class="user-info">
+          <span class="user-name">Nikhil Tyagi</span>
+          <span class="user-status">Pro Member • HDFC & ICICI</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <header class="top-bar">
+        <div>
+          <h1>Financial Goals & Targets</h1>
+          <p class="subtitle">Track savings milestones, allocate capital, and monitor time-to-completion</p>
+        </div>
+        <div class="top-actions">
+          <button class="btn btn-secondary" id="allocateQuickBtn" type="button">
+            <span class="btn-icon">⚡</span>
+            <span>Allocate Funds</span>
+          </button>
+          <button class="btn btn-primary" id="openGoalModalBtn" type="button">
+            <span class="btn-icon">+</span>
+            <span>New Goal</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- KPI Summary Cards Grid -->
+      <section class="cards-grid" aria-label="Goals Summary Metrics">
+        <div class="card card-purple">
+          <div class="card-header-row">
+            <span class="card-label">Total Targeted Capital</span>
+            <span class="card-icon-pill">🎯</span>
+          </div>
+          <p class="card-value" id="kpiTotalTarget">₹9,50,000</p>
+          <div class="card-footer-row">
+            <span class="card-change positive" id="kpiTargetSub">Across 4 active goals</span>
+          </div>
+          <span class="card-subtext">Compounding savings allocation</span>
+        </div>
+
+        <div class="card card-teal">
+          <div class="card-header-row">
+            <span class="card-label">Total Saved Towards Goals</span>
+            <span class="card-icon-pill">💰</span>
+          </div>
+          <p class="card-value" id="kpiTotalSaved">₹5,04,000</p>
+          <div class="card-footer-row">
+            <span class="card-change positive" id="kpiProgressPct">▲ 53.1% aggregate completion</span>
+          </div>
+          <span class="card-subtext">Remaining: ₹4,46,000 to targets</span>
+        </div>
+
+        <div class="card card-pink">
+          <div class="card-header-row">
+            <span class="card-label">Monthly Allocation Pace</span>
+            <span class="card-icon-pill">📈</span>
+          </div>
+          <p class="card-value" id="kpiMonthlyPace">₹28,500 / mo</p>
+          <div class="card-footer-row">
+            <span class="card-change positive">81.4% of savings surplus</span>
+          </div>
+          <span class="card-subtext">Auto-invested via SIP & recurring sweep</span>
+        </div>
+
+        <div class="card card-orange">
+          <div class="card-header-row">
+            <span class="card-label">Milestones on Track</span>
+            <span class="card-icon-pill">🏆</span>
+          </div>
+          <p class="card-value" id="kpiGoalsOnTrack">3 / 4 On Schedule</p>
+          <div class="card-footer-row">
+            <span class="card-change neutral" id="kpiEarliestMilestone">Earliest: Jan 2027</span>
+          </div>
+          <span class="card-subtext">1 goal needs run-rate acceleration</span>
+        </div>
+      </section>
+
+      <!-- Goals Grid Showcase Section -->
+      <section class="account-cards-section">
+        <div class="section-title-row">
+          <div>
+            <h2>Active Goals & Savings Velocity</h2>
+            <p class="subtitle" style="margin-top: 2px;">Real-time progress bars, completion timelines, and required monthly contributions</p>
+          </div>
+          <div class="tx-filter-group" role="group" aria-label="Goal Filters">
+            <button class="tx-filter-btn active" data-goal-filter="all" id="filterGoalAll">All Goals</button>
+            <button class="tx-filter-btn" data-goal-filter="active" id="filterGoalActive">In Progress</button>
+            <button class="tx-filter-btn" data-goal-filter="completed" id="filterGoalCompleted">Completed</button>
+          </div>
+        </div>
+
+        <div class="goals-grid" id="goalsGrid">
+          <!-- Populated dynamically by js/goals.js -->
+        </div>
+      </section>
+
+      <!-- Bottom Grid: Contributions Activity & Run-Rate Simulator -->
+      <section class="bottom-grid">
+
+        <!-- Recent Goal Allocations Ledger -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <div>
+              <h2>Recent Goal Contributions</h2>
+              <p class="box-subtitle">Verified transfers and savings allocations deposited towards goals</p>
+            </div>
+            <button type="button" class="btn-text-sm" id="clearContribsBtn">Clear Log</button>
+          </div>
+
+          <div class="transfer-history-list" id="goalContribsList">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Target Date & Savings Run-Rate Simulator -->
+        <div class="budget-box">
+          <div class="budget-header">
+            <div>
+              <h3>Milestone Pace Simulator</h3>
+              <p class="budget-subtitle">Adjust monthly contribution to project milestone completion</p>
+            </div>
+            <span class="budget-overall-tag" id="simVelocityBadge">Interactive</span>
+          </div>
+
+          <div class="goal-simulator-card">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="simGoalSelect">Select Target Milestone</label>
+              <select id="simGoalSelect" class="tx-select-dropdown" style="width: 100%;">
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+
+            <div class="sim-slider-wrap">
+              <div class="sim-slider-header">
+                <span>Monthly Allocation:</span>
+                <span class="sim-slider-val" id="simPaceVal">₹15,000 / mo</span>
+              </div>
+              <input type="range" id="simSlider" min="2000" max="60000" step="1000" value="15000" style="width: 100%; accent-color: var(--brand-purple);">
+            </div>
+
+            <div class="sim-output-box">
+              <span class="sim-output-label">Projected Milestone Completion</span>
+              <p class="sim-output-val" id="simProjectedDate">Estimated: March 2027</p>
+              <span class="card-subtext" id="simComparisonText" style="display: block; margin-top: 4px; font-size: 11px; color: var(--text-muted);">
+                At this pace, you reach this target right on schedule!
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal: Define / Edit Goal -->
+  <div class="modal-overlay" id="goalModal" role="dialog" aria-modal="true" aria-labelledby="goalModalTitle">
+    <div class="modal-backdrop" aria-label="Close dialog"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="goalModalTitle">🎯 Define Financial Goal</h3>
+        <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+      </div>
+      <form id="goalForm">
+        <input type="hidden" id="editGoalId" value="">
+
+        <div class="form-group">
+          <label for="goalName">Goal / Milestone Name</label>
+          <input type="text" id="goalName" placeholder="e.g. Emergency Fund, New Car, Bali Vacation" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="goalCategory">Category</label>
+            <select id="goalCategory" required>
+              <option value="Safety">Safety & Emergency</option>
+              <option value="Vehicle">Vehicle & Auto</option>
+              <option value="Travel">Travel & Vacation</option>
+              <option value="Real Estate">House Downpayment</option>
+              <option value="Work & Tech">Work & Tech Gadgets</option>
+              <option value="Education">Education & Courses</option>
+              <option value="Retirement">Long-Term Wealth</option>
+              <option value="Custom">Custom Target</option>
+            </select>
+          </div>
+          <div class="form-group half">
+            <label for="goalDate">Target Completion Date</label>
+            <input type="date" id="goalDate" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="goalAmount">Target Capital (₹)</label>
+            <input type="number" id="goalAmount" placeholder="e.g. 200000" min="1000" required>
+          </div>
+          <div class="form-group half">
+            <label for="goalCurrentAmount">Current Saved (₹)</label>
+            <input type="number" id="goalCurrentAmount" placeholder="e.g. 50000" min="0" value="0">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="goalDesc">Notes / Strategy (Optional)</label>
+          <input type="text" id="goalDesc" placeholder="e.g. Auto-allocated via monthly SIP and bank sweep">
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="saveGoalSubmitBtn">Save Goal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Allocate / Add Funds to Goal -->
+  <div class="modal-overlay" id="allocateModal" role="dialog" aria-modal="true" aria-labelledby="allocateModalTitle">
+    <div class="modal-backdrop" aria-label="Close dialog"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="allocateModalTitle">⚡ Allocate Funds to Goal</h3>
+        <button class="modal-close" aria-label="Close dialog" type="button">&times;</button>
+      </div>
+      <form id="allocateForm">
+        <div class="form-group">
+          <label for="allocateGoalSelect">Select Target Goal</label>
+          <select id="allocateGoalSelect" required>
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="allocateSourceAccount">Source Account</label>
+          <select id="allocateSourceAccount" required>
+            <option value="HDFC Salary A/c">HDFC Corporate Salary A/c (₹2,84,500)</option>
+            <option value="ICICI Savings A/c">ICICI Privilege Savings A/c (₹1,45,000)</option>
+            <option value="External Direct">Other / Direct Inflow</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label-row">
+            <label for="allocateAmount">Contribution Amount (₹)</label>
+            <div class="quick-presets">
+              <button type="button" class="preset-chip" data-alloc-preset="1000">+₹1k</button>
+              <button type="button" class="preset-chip" data-alloc-preset="5000">+₹5k</button>
+              <button type="button" class="preset-chip" data-alloc-preset="10000">+₹10k</button>
+              <button type="button" class="preset-chip" data-alloc-preset="25000">+₹25k</button>
+            </div>
+          </div>
+          <input type="number" id="allocateAmount" placeholder="e.g. 5000" min="500" required>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-secondary modal-close-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Allocation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="dashboard-toast" role="status" aria-live="polite"></div>
+
+  <!-- FinSight Scripts -->
+  <script src="js/core.js" defer></script>
+  <script src="js/goals.js" defer></script>
+
+</body>
+</html>
+
